@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <meta content="width=device-width,initial-scale=1,user-scalable=no" name="viewport" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-touch-fullscreen" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title></title>
+
+  <script>
+    !(function (n) {
+      function e() {
+        var e = n.document.documentElement,
+          t = e.getBoundingClientRect().width;
+        e.style.fontSize = t >= 640 ? '40px' : t <= 320 ? '20px' : (t / 320) * 20 + 'px';
+      }
+      n.addEventListener('resize', function () {
+        e();
+      }),
+        e();
+    })(window);
+  </script>
+  <script>
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+      // WeixinJSBridge.call('hideToolbar');        // 隐藏底部状态栏
+      WeixinJSBridge.call('hideOptionMenu');     // 隐藏右上角的三个点的选项
+    });
+  </script>
+  <style>
+    body {
+      -webkit-text-size-adjust: 100% !important;
+      text-size-adjust: 100% !important;
+      -moz-text-size-adjust: 100% !important;
+    }
+  </style>
+  <script>
+    // 强制禁止用户修改微信客户端的字体大小
+    (function () {
+      if (
+        typeof WeixinJSBridge == 'object' &&
+        typeof WeixinJSBridge.invoke == 'function'
+      ) {
+        handleFontSize();
+      } else {
+        if (document.addEventListener) {
+          document.addEventListener(
+            'WeixinJSBridgeReady',
+            handleFontSize,
+            false
+          );
+        } else if (document.attachEvent) {
+          document.attachEvent('WeixinJSBridgeReady', handleFontSize);
+          document.attachEvent('onWeixinJSBridgeReady', handleFontSize);
+        }
+      }
+      function handleFontSize() {
+        // 设置网页字体为默认大小
+        WeixinJSBridge.invoke('setFontSizeCallback', { fontSize: 0 });
+        // 重写设置网页字体大小的事件
+        WeixinJSBridge.on('menu:setfont', function () {
+          WeixinJSBridge.invoke('setFontSizeCallback', { fontSize: 0 });
+        });
+      }
+    })();
+  </script>
+</head>
+
+<body>
+  <View id="app"></View>
+</body>
+
+</html>

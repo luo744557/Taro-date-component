@@ -1,0 +1,71 @@
+{
+  "name": "wxmp-supply-chain-C",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "templateInfo": {
+    "name": "default",
+    "typescript": false,
+    "css": "less"
+  },
+  "scripts": {
+    "build:weapp": "NODE_ENV=production taro build --type weapp",
+    "build:h5": "taro build --type h5",
+    "dev:h5": "npm run build:h5 -- --watch",
+    "dev:weapp": "npm run build:weapp -- --watch"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "Android >= 4.1",
+    "ios >= 8"
+  ],
+  "author": "",
+  "dependencies": {
+    "@antmjs/vantui": "^2.5.11",
+    "@babel/runtime": "^7.7.7",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@tarojs/components": "3.4.13",
+    "@tarojs/plugin-framework-react": "3.4.13",
+    "@tarojs/plugin-platform-h5": "^3.4.13",
+    "@tarojs/react": "3.4.13",
+    "@tarojs/router": "3.4.13",
+    "@tarojs/runtime": "3.4.13",
+    "@tarojs/taro": "3.4.13",
+    "axios": "^0.27.2",
+    "babel-plugin-import": "^1.13.5",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.1.15",
+    "dayjs": "^1.11.3",
+    "husky": "^8.0.1",
+    "nervjs": "^1.5.7",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-transition-group": "^4.4.2",
+    "taro-ui": "^3.0.0-alpha.10"
+  },
+  "devDependencies": {
+    "@antmjs/vantui": "^2.5.11",
+    "@babel/core": "^7.8.0",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@tarojs/mini-runner": "3.4.13",
+    "@tarojs/plugin-html": "^3.4.13",
+    "@tarojs/webpack-runner": "3.4.13",
+    "@types/react": "^17.0.2",
+    "@types/webpack-env": "^1.13.6",
+    "axios": "^0.27.2",
+    "babel-plugin-import": "^1.13.5",
+    "babel-preset-taro": "3.4.13",
+    "cross-env": "^7.0.3",
+    "cssnano": "5.1.15",
+    "dayjs": "^1.11.3",
+    "eslint": "^8.12.0",
+    "eslint-config-taro": "3.4.13",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-react": "^7.8.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "react-transition-group": "^4.4.2",
+    "stylelint": "^14.4.0"
+  }
+}

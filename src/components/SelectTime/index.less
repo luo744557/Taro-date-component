@@ -1,0 +1,103 @@
+.select-time-pop {
+  height: 1390px;
+  max-height: 100vh;
+  overflow: hidden;
+  .pop-warp {
+    background-color: #fff;
+
+    .select-warp {
+      width: 100vw;
+      .day-warp {
+        padding: 0 20px;
+      }
+    }
+    .hour-range-warp {
+      margin-top: 26px;
+      // padding: 0 40px;
+      .top-border {
+        margin: 0 5px;
+        border-top: 1px solid #e4e7eb
+      }
+      .hour-header {
+        margin: 44px 0 25px 40px;
+        height: 42px;
+        font-weight: bold;
+        font-size: 30px;
+        color: #040818;
+      }
+      .hour-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        box-sizing: border-box;
+        padding: 20px 45px;
+        width: 100vw;
+        height: 120px;
+        // border-bottom: 1px solid #e4e7eb;
+        // height: 40px;
+        line-height: 40px;
+        font-weight: 400;
+        font-size: 28px;
+        color: #040818;
+        &-content {
+          
+        }
+        &-rest {
+          margin-top: 6px;
+        }
+        &.disabled {
+          color: #ACAFC3;
+        }
+        &.selected {
+          color: #4262C9;
+          background: #F3F7FB;
+        }
+        .checked-img {
+          margin-right: 15px;
+          width: 40px;
+          height: 40px;
+          background-image: url("https://img.fniaoyu.com/fniaoyu-8dafbda7-ef9a-318b-00de-8f18f5d9dc90.png");
+          background-size: 100% 100%;
+          border-radius: 50%;
+        }
+      }
+      .hour-item::after {
+        position: absolute;
+        display: block;
+        top: 120px;
+        left: 45px;
+        width: 88vw;
+        height: 1px;
+        background-color: #e4e7eb;
+        content: ' ';
+      }
+      .no-border::after {
+        display: none;
+      }
+    }
+  }
+
+  .pop-title {
+    height: 44px;
+    font-size: 32px;
+    font-weight: bold !important;
+    color: #040818;
+    line-height: 45px;
+  }
+
+  .title-warp {
+    padding: 42px 36px;
+    border-bottom: 2px solid #e4e7eb;
+    /* margin-bottom: 36px; */
+    display: flex;
+    justify-content: space-between;
+    height: 44px;
+    align-items: center;
+  }
+
+  .icon-cha {
+    width: 40px;
+    height: 40px;
+  }
+}

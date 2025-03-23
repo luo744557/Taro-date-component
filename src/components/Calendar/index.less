@@ -1,0 +1,141 @@
+.calendar-content {
+  box-sizing: border-box;
+  width: 100%;
+  padding-bottom: 10px;
+  overflow: hidden;
+  font-size: 28px;
+  background-color: #fff;
+  .calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 22px 20px;
+    min-height: 42px;
+    line-height: 42px;
+    font-weight: bold;
+    font-size: 30px;
+    color: #040818;
+    
+    &-title {
+      width: 60%;
+    }
+    &.space-between {
+      justify-content: space-between;
+      padding-right: 32px;
+    }
+  }
+  .calendar-operate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 42px;
+    .icon {
+      width: 35px;
+      height: 35px;
+      background-image: url('https://img.fniaoyu.com/fniaoyu-ad2c8534-a23d-9ff9-9d45-ff560c77c292.png');
+      background-size: 100% 100%;
+      &.left-icon {
+        transform: rotate(180deg);
+      }
+    }
+    &-text {
+      padding: 0 15px;
+    }
+  }
+  &-head {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 30px;
+    height: 69px;
+    line-height: 69px;
+    border-radius: 10px;
+    background: #F3F7FB;
+
+    .head-cell {
+      display: flex;
+      flex-basis: 14.28571%;
+      align-items: center;
+      justify-content: center;
+      height: 69px;
+    }
+  }
+  &-warp {
+    position: relative;
+    min-height: 468px;
+    transition: height 0.3s;
+    &.week-mode {
+      height: 36px;
+    }
+    .month-cell {
+      position: absolute;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      will-change: transform;
+      .day-cell {
+        display: flex;
+        flex-basis: 14.28571%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        min-height: 60px;
+        line-height: 60px;
+        color: #040818;
+        &.is-other-month-day {
+          color: #ACAFC3;
+        }
+        &.disabled-day {
+          color: #ACAFC3;
+        }
+        .day-text {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 60px;
+          height: 60px;
+        }
+        .current-day {
+          color: #fff;
+          background: #4262C9;
+          border-radius: 50%;
+        }
+        .circle-mark {
+          border: 1px solid #4378be;
+          border-radius: 50%;
+        }
+        .dot-mark {
+          width: 4px;
+          height: 4px;
+          background-color: #4378be;
+          border-radius: 50%;
+        }
+        .extra-text {
+          text-align: center;
+          min-width: 2px;
+          height: 24px;
+          line-height: 24px;
+          font-weight: normal;
+          font-size: 18px;
+          color: #4262C9;
+          letter-spacing: 1.5px;
+        }
+      }
+    }
+  }
+  .bottom-operate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    img {
+      width: auto;
+      height: 16px;
+      &.top {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
