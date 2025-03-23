@@ -2,6 +2,8 @@
 
 ## 使用
   git clone 
+
+## 安装依赖
   npm install
 
 ## 微信
