@@ -7,7 +7,7 @@ export default defineAppConfig({
     enableShareTimeline: true,
     navigationBarBackgroundColor: '#fff',
     navigationBarTextStyle: 'black',
-    navigationStyle: 'custom',
+    // navigationStyle: 'custom',
     backgroundColor: '#f4f5f9',
     navigationBarTitleText: '',
   },

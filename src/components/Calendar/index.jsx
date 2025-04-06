@@ -45,6 +45,7 @@ class MonthView extends PureComponent {
     const { disableWeekView } = this.props
     const moveX = e.touches[0].clientX - this.touchStartX
     const moveY = e.touches[0].clientY - this.touchStartY
+    console.log(this.ref)
     const calendarW = this.ref.current.offsetWidth
     const calendarH = this.ref.current.offsetHeight
     if (Math.abs(moveX) > Math.abs(moveY)) {
